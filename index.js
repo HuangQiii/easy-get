@@ -1,14 +1,14 @@
 "use strict";
 
-const REG_GETTPATH = /\[(['"a-zA-Z0-9]*)\]|\./gi;
-const REG_REPLACE_QUOTES = /[\'\"]/gi;
+var REG_GETTPATH = /\[(['"a-zA-Z0-9]*)\]|\./gi;
+var REG_REPLACE_QUOTES = /[\'\"]/gi;
 
-const easyGet = function (data, path, options = {}) {
-    const pathArr = path.split(REG_GETTPATH).filter(x => x !== undefined);
-    const result = pathArr.reduce(
+var easyGet = function (data, path, options = {}) {
+    var pathArr = path.split(REG_GETTPATH).filter(x => x !== undefined);
+    var result = pathArr.reduce(
         (result, currentPath, currentIndex) => {
             if (!result.startErrorPath) {
-                let key = currentPath.replace(REG_REPLACE_QUOTES, '');
+                var key = currentPath.replace(REG_REPLACE_QUOTES, '');
                 result.value = result.value[key];
                 if (currentIndex !== pathArr.length - 1) {
                     if (Object.prototype.toString.call(result.value) === '[object Undefined]') {
