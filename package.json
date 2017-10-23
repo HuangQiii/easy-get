@@ -1,0 +1,24 @@
+{
+  "name": "easy-get",
+  "version": "1.0.0",
+  "description": "从对象中多次获取属性不报错",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuangQiii/easy-get.git"
+  },
+  "keywords": [
+    "object",
+    "key",
+    "get"
+  ],
+  "author": "HuangQ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HuangQiii/easy-get/issues"
+  },
+  "homepage": "https://github.com/HuangQiii/easy-get#readme"
+}
