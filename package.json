@@ -10,11 +10,6 @@
   "scripts": {
     "test": "mocha"
   },
-  "devDependencies": {
-    "gulp-format-md": "^0.1.5",
-    "mocha": "*",
-    "should": "*"
-  },
   "keywords": [
     "object",
     "key",
@@ -25,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/HuangQiii/easy-get/issues"
   },
-  "homepage": "https://github.com/HuangQiii/easy-get#readme"
+  "homepage": "https://github.com/HuangQiii/easy-get#readme",
+  "dependencies": {
+    "mocha": "^4.0.1",
+    "should": "^13.1.2"
+  }
 }
