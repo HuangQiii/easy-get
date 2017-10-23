@@ -9,7 +9,7 @@ var easyGet = function (data, path, options = {}) {
                 let key = currentPath.replace(REG_REPLACE_QUOTES, '');
                 result.value = result.value[key];
                 if (currentIndex !== pathArr.length - 1) {
-                    if (Object.prototype.toString.call(result.value) !== '[object Object]') {
+                    if (Object.prototype.toString.call(result.value) === '[object Undefined]') {
                         result.startErrorPath = currentPath;
                     }
                 }
@@ -25,6 +25,7 @@ var easyGet = function (data, path, options = {}) {
 }
 
 // var obj = { a: { b: 1 } }
-// easyGet(obj, 'a.b.c', options = { errorCallback: function (ep, pa) { console.log(ep), console.log(pa) } })
+// var value = easyGet(obj, 'a.b.c.d', options = { errorCallback: function (ep, pa) { console.log(ep), console.log(pa) } })
+// console.log(value)
 
 exports.easyGet = easyGet;
