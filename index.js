@@ -1,7 +1,9 @@
+"use strict";
+
 const REG_GETTPATH = /\[(['"a-zA-Z0-9]*)\]|\./gi;
 const REG_REPLACE_QUOTES = /[\'\"]/gi;
 
-module.exports = function (data, path, options = {}) {
+const easyGet = function (data, path, options = {}) {
     const pathArr = path.split(REG_GETTPATH).filter(x => x !== undefined);
     const result = pathArr.reduce(
         (result, currentPath, currentIndex) => {
@@ -22,10 +24,6 @@ module.exports = function (data, path, options = {}) {
         options.errorCallback(result.startErrorPath, pathArr);
     }
     return result.value;
-}
+};
 
-// var obj = { a: { b: 1 } }
-// var value = easyGet(obj, 'a.b.c.d', options = { errorCallback: function (ep, pa) { console.log(ep), console.log(pa) } })
-// console.log(value)
-
-// exports.easyGet = easyGet;
+exports.easyGet = easyGet;
