@@ -12,7 +12,6 @@ const testData = {
         }
     }
 };
-// console.log(easyGet.easyGet(testData,'a.b.c2'))
 describe('easyGet Correct', function () {
     it('should return 1:', function () {
         easyGet.easyGet(testData, 'a.b.c1').should.eql(1);
